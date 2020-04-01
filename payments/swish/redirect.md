@@ -123,7 +123,7 @@ Content-Type: application/json
 |  ✔︎︎︎︎︎  | └─➔&nbsp;`type`              | `string`      | `Swish`.                                                                                                                                                                                                                                                                                           |
 |  ✔︎︎︎︎︎  | └─➔&nbsp;`amount`            | `integer`     | {% include field-description-amount.md %}                                                                                                                                                                                                                                                          |
 |  ✔︎︎︎︎︎  | └─➔&nbsp;`vatAmount`         | `integer`     | {% include field-description-vatamount.md %}                                                                                                                                                 |
-|  ✔︎︎︎︎︎  | └➔&nbsp;`description`        | `string(40)`  | A textual description max 40 characters of the purchase.                                                                                                                                                                                                                                           |
+|  ✔︎︎︎︎︎  | └➔&nbsp;`description`        | `string(40)`  | A textual description max 40 characters of the purchase. Read more about the [description field][description] in Other Features.                                                                                                                                                                                                                                            |
 |          | └─➔&nbsp;`paymentAgeLimit`   | `integer`     | Positive number sets required age limit to fulfill the payment.                                                                                                                                                                                                                                    |
 |          | └➔&nbsp;`payerReference`     | `string`      | The reference to the payer (consumer/end user) from the merchant system. E.g mobile number, customer number etc.                                                                                                                                                                                   |
 |  ✔︎︎︎︎︎  | └➔&nbsp;`userAgent`          | `string`      | The user agent reference of the consumer's browser - [see user agent definition][user-agent-definition]                                                                                                                                                                                            |
@@ -243,6 +243,7 @@ sequenceDiagram
 {% include iterator.html prev_href="direct" prev_title="Back: Direct"
 next_href="seamless-view" next_title="Next: Seamless View" %}
 
+[description]: payments/swish/other-features#description
 [swish-redirect-image]: /assets/screenshots/swish/redirect-view/view/windows-small-window.png
 [callback-url]: /payments/swish/other-fetures#callback
 [seamless-view]: /payments/swish/seamless-view
