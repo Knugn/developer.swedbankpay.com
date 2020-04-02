@@ -112,7 +112,7 @@ Content-Type: application/json
 |  ✔︎︎︎︎︎  | └─➔&nbsp;`type`                   | `string`      | Use the invoice value [See the Prices resource and prices object types for more information][price-resource].                                                                                                                                                                                                                                  |
 |  ✔︎︎︎︎︎  | └─➔&nbsp;`amount`                 | `integer`     | {% include field-description-amount.md %}                                                                                                                                                                                                                                                                                                      |
 |  ✔︎︎︎︎︎  | └─➔&nbsp;`vatAmount`              | `integer`     | {% include field-description-vatamount.md %}                                                                                                                                                                                             |
-|  ✔︎︎︎︎︎  | └➔&nbsp;`description`             | `string(40)`  | A textual description max 40 characters of the purchase. Read more about the [description field][description] in Other Features.                                                                                                                                                                                                                                                                                       |
+|  ✔︎︎︎︎︎  | └➔&nbsp;`description`             | `string(40)`  | {% include field-description-description.md %}                                                                                                                                                                                                                                                                                       |
 |          | └➔&nbsp;`payerReference`          | `string`      | The reference to the payer (consumer/end user) from the merchant system. E.g mobile number, customer number etc.                                                                                                                                                                                                                               |
 |          | └➔&nbsp;`generatePaymentToken`    | `boolean`     | `true` or `false`. Set this to `true` if you want to create a paymentToken for future use as One Click.                                                                                                                                                                                                                                        |
 |          | └➔&nbsp;`generateRecurrenceToken` | `boolean`     | `true` or `false`. Set this to `true` if you want to create a recurrenceToken for future use Recurring purchases (subscription payments).                                                                                                                                                                                                      |
@@ -258,6 +258,7 @@ embedded on your website.
     }).open();
 </script>
 ```
+
 ## Purchase Flow
 
 The sequence diagram below shows a high level description of the
@@ -294,7 +295,6 @@ sequenceDiagram
 {% include alert.html type="neutral" icon="info" body="
 Note that the invoice will not be created/distributed before you have
 made a `capture` request." %}
-
 
 {% include iterator.html prev_href="redirect" prev_title="Back: Redirect"
 next_href="direct" next_title="Next: Direct" %}
